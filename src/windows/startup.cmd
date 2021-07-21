@@ -1,1 +1,1 @@
-start %scoop%\apps\cryptomator\current\Cryptomator.exe
+REM start %scoop%\apps\cryptomator\current\Cryptomator.exe
