@@ -1,5 +1,6 @@
 Write-Output 'Installing mold...'
 
+$scoop = "$env:userprofile/scoop"
 $osPath = "$env:scoop/buckets/mold/home/path/windows"
 
 if(!$(gcm scoop)) {
@@ -10,7 +11,7 @@ if(!$(gcm scoop)) {
 
 	scoop bucket add mold https://github.com/fc1943s/mold.git
 	
-	[Environment]::SetEnvironmentVariable('scoop', "$env:userprofile/scoop", 'User')
+	[Environment]::SetEnvironmentVariable('scoop', $scoop, 'User')
 	
 	[Environment]::SetEnvironmentVariable('Path', "$env:Path;" + 
 	    $osPath + ";" +
@@ -20,7 +21,7 @@ if(!$(gcm scoop)) {
 	, 'User')
 }
 
-$windowsRoot = "$env:scoop/buckets/mold/src/windows"
+$windowsRoot = "$scoop/buckets/mold/src/windows"
 
 . $windowsRoot/install-dotnet.ps1
 
