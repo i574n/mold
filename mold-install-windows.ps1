@@ -1,5 +1,7 @@
 Write-Output 'Installing mold...'
 
+$osPath = "$env:scoop/buckets/mold/home/path/windows"
+
 if(!$(gcm scoop)) {
 	Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
 
@@ -7,9 +9,18 @@ if(!$(gcm scoop)) {
 	scoop install main/git
 
 	scoop bucket add mold https://github.com/fc1943s/mold.git
+	
+	[Environment]::SetEnvironmentVariable('scoop', "$env:userprofile/scoop", 'User')
+	
+	[Environment]::SetEnvironmentVariable('Path', "$env:Path;" + 
+	    $osPath + ";" +
+		"$scoop\persist\rustup\.cargo\bin;" +
+		"$scoop\apps\nvm\current\nodejs\nodejs;" +
+		"$scoop\apps\cygwin\current\root\bin"
+	, 'User')
 }
 
-$windowsRoot = "$env:userprofile/scoop/buckets/mold/src/windows"
+$windowsRoot = "$env:scoop/buckets/mold/src/windows"
 
 . $windowsRoot/install-dotnet.ps1
 
