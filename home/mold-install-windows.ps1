@@ -1,7 +1,7 @@
 Write-Output 'Installing mold...'
 
 $scoop = "$env:userprofile/scoop"
-$osPath = "$env:scoop/buckets/mold/home/path/windows"
+$osPath = "$scoop/buckets/mold/home/path/windows"
 
 if(!$(gcm scoop)) {
 	Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
