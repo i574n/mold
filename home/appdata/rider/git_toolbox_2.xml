@@ -1,0 +1,19 @@
+<application>
+  <component name="GitToolBoxAppSettings2">
+    <option name="autoFetchEnabled" value="false" />
+    <option name="extrasConfig">
+      <ExtrasConfig>
+        <option name="autoFetchEnabledOverride">
+          <ExtrasBoolConfigOverride>
+            <option name="applied">
+              <list />
+            </option>
+            <option name="enabled" value="true" />
+          </ExtrasBoolConfigOverride>
+        </option>
+      </ExtrasConfig>
+    </option>
+    <option name="previousVersionMigrated" value="true" />
+    <option name="version" value="4" />
+  </component>
+</application>

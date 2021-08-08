@@ -1,0 +1,5 @@
+<application>
+  <component name="IntentionManagerSettings">
+    <ignoreAction name="Markdown/References/Redundant reference link/image link text" />
+  </component>
+</application>

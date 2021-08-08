@@ -1,0 +1,15 @@
+<application>
+  <component name="ActionMacroManager">
+    <macro name="aaa">
+      <action id="FindInPath" />
+      <typing text-keycode="86:0;73:0;86:0;65:0;76:0;68:0;73:0">vivaldi</typing>
+      <shortuct text="DOWN" />
+      <shortuct text="DOWN" />
+      <shortuct text="ENTER" />
+      <shortuct text="DOWN" />
+      <shortuct text="ENTER" />
+      <action id="FindInPath" />
+      <shortuct text="ESCAPE" />
+    </macro>
+  </component>
+</application>
