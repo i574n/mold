@@ -1,7 +1,8 @@
 Write-Output 'Installing mold...'
 
 $scoop = "$env:userprofile/scoop"
-$osPath = "$scoop/buckets/mold/home/path/windows"
+$mold = "$scoop/buckets/mold"
+$osPath = "$mold/home/path/windows"
 
 if(!$(gcm scoop)) {
 	Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
@@ -14,7 +15,7 @@ if(!$(gcm scoop)) {
 	[Environment]::SetEnvironmentVariable('scoop', $scoop, 'User')
 	
 	[Environment]::SetEnvironmentVariable('Path', "$env:Path;" + 
-	    $osPath + ";" +
+	    "$mold/home/path/windows;" +
 		"$scoop\persist\rustup\.cargo\bin;" +
 		"$scoop\apps\nvm\current\nodejs\nodejs;" +
 		"$scoop\apps\cygwin\current\root\bin"
@@ -35,6 +36,7 @@ scoop install extras/synctrayzor
 scoop install jetbrains/rider-portable
 
 # git clone https://github.com/fc1943s/rss.git $env:userprofile/home/fs/repos/rss
+New-Item -Path $scoop/persist/rider-portable/profile/config/settingsRepository/repository -ItemType SymbolicLink -Value $mold/home/appdata/rider
 
 $windowsRoot = "$scoop/buckets/mold/src/windows"
 # . $windowsRoot/install-scoop-extras.ps1
