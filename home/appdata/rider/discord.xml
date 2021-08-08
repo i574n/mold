@@ -1,0 +1,9 @@
+<application>
+  <component name="DiscordApplicationSettings">
+    <option name="applicationIconSmallText" value="APPLICATION_VERSION" />
+    <option name="applicationTime" value="HIDE" />
+    <option name="projectTime" value="HIDE" />
+    <option name="fileTime" value="HIDE" />
+    <option name="applicationLastUpdateNotification" value="1.6.1" />
+  </component>
+</application>

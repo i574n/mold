@@ -1,0 +1,41 @@
+<application>
+  <component name="FileTypeManager" version="18">
+    <ignoreFiles list="*.pyc;*.pyo;*.rbc;*.yarb;.DS_Store;.git;.hg;.svn;CVS;__pycache__;_svn;vssver.scc;vssver2.scc" />
+    <extensionMap>
+      <mapping pattern=".dsmrc" type="JSON" />
+      <mapping pattern="LOCK" type="PLAIN_TEXT" />
+      <mapping pattern="test" type="PLAIN_TEXT" />
+      <mapping pattern="index" type="PLAIN_TEXT" />
+      <mapping pattern=".tsconfig" type="PLAIN_TEXT" />
+      <mapping pattern="MANIFEST-000001" type="PLAIN_TEXT" />
+      <mapping pattern="the-real-index" type="PLAIN_TEXT" />
+      <mapping pattern="Web Data" type="PLAIN_TEXT" />
+      <mapping pattern="variations_stamp" type="PLAIN_TEXT" />
+      <mapping ext="ldb" type="PLAIN_TEXT" />
+      <mapping ext="fs~" type="PLAIN_TEXT" />
+      <mapping ext="references" type="PLAIN_TEXT" />
+      <mapping ext="mdx" type="PLAIN_TEXT" />
+      <mapping ext="lock" type="PLAIN_TEXT" />
+      <mapping ext="dat" type="PLAIN_TEXT" />
+      <mapping ext="pb" type="PLAIN_TEXT" />
+      <removed_mapping ext="bat" approved="true" type="Bat" />
+      <removed_mapping ext="bat" approved="true" type="PLAIN_TEXT" />
+      <removed_mapping ext="cmd" approved="true" type="Cmd" />
+      <removed_mapping ext="cmd" approved="true" type="PLAIN_TEXT" />
+      <removed_mapping ext="dockerfile" approved="true" type="textmate" />
+      <removed_mapping ext="groovy" approved="true" type="PLAIN_TEXT" />
+      <removed_mapping ext="log" approved="true" type="PLAIN_TEXT" />
+      <removed_mapping ext="makefile" approved="true" type="textmate" />
+      <removed_mapping ext="php" approved="true" type="PLAIN_TEXT" />
+      <removed_mapping ext="php4" approved="true" type="PLAIN_TEXT" />
+      <removed_mapping ext="php5" approved="true" type="PLAIN_TEXT" />
+      <removed_mapping ext="phtml" approved="true" type="PLAIN_TEXT" />
+      <removed_mapping ext="snakefile" approved="true" type="textmate" />
+      <removed_mapping ext="swift" approved="true" type="PLAIN_TEXT" />
+      <mapping ext="bat" type="Batch" />
+      <mapping ext="cmd" type="Batch" />
+      <mapping ext="gradle.kts" type="Kotlin" />
+      <mapping ext="main.kts" type="Kotlin" />
+    </extensionMap>
+  </component>
+</application>
