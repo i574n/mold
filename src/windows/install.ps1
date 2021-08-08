@@ -20,6 +20,7 @@ scoop install extras/synctrayzor
 scoop install extras/vscode-insiders-portable
 scoop install jetbrains/rider-portable
 
+C:\Users\root\scoop\apps\vscode-insiders-portable\current\vscode-install-context.reg
 
 # git clone https://github.com/fc1943s/rss.git $env:userprofile/home/fs/repos/rss
 

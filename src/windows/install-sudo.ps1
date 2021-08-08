@@ -35,7 +35,7 @@ Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Keyboard Layout' `
     -Value ([byte[]](0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00,     `
             0x64, 0x00, 0x01, 0x00, 0x01, 0x00, 0x3a, 0x00, 0x00, 0x00, 0x00, 00))
 
-Get-ChildItem "../fonts" | ForEach-Object {
+Get-ChildItem "$env:mold/fonts" | ForEach-Object {
     if(![System.IO.File]::Exists("$env:windir/Fonts/$_")){
         New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null
         Copy-Item $_.FullName -destination $env:windir/Fonts/
