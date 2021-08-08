@@ -3,8 +3,8 @@ Write-Output "Installing mold (sudo)..."
 function WindowsFeature {
     [CmdletBinding()]
     param(
-        [Parameter(Position=0,Mandatory=$true)] [string]$FeatureName 
-    )  
+        [Parameter(Position=0,Mandatory=$true)] [string]$FeatureName
+    )
 	if(!$((Get-WindowsOptionalFeature -FeatureName $FeatureName -Online).State -eq "Enabled")) {
 		Enable-WindowsOptionalFeature -Online -FeatureName $FeatureName -All # asks for restart
 	} else {
