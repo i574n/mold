@@ -22,6 +22,22 @@ Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Keyboard Layout' `
 	-Value ([byte[]](0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00,     `
 			0x64, 0x00, 0x01, 0x00, 0x01, 0x00, 0x3a, 0x00, 0x00, 0x00, 0x00, 00))
 
-mkdir $env:scoop/persist/rider-portable/profile/config/settingsRepository
-New-Item -Path $env:scoop/persist/rider-portable/profile/config/settingsRepository/repository -ItemType SymbolicLink -Value $env:mold/home/appdata/rider
+Get-ChildItem "../fonts" | ForEach-Object {
+    New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null
+    Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"
+}
+
+# mkdir $env:scoop/persist/rider-portable/profile/config/settingsRepository
+# New-Item -Path "$env:scoop/persist/rider-portable/profile/config/settingsRepository/repository" -ItemType SymbolicLink -Value $env:mold/home/appdata/rider
+# "$env:mold/home/appdata/rider"
+
+if(![System.IO.File]::Exists("$env:mold/home/appdata/rider/.git")){
+	pushd
+	echo "initializing rider repo"
+	cd "$env:mold/home/appdata/rider"
+	git init
+	git add .
+	git commit -m '.'
+	popd
+}
 
