@@ -21,14 +21,25 @@ if(!$(gcm scoop)) {
 	, 'User')
 }
 
-$windowsRoot = "$scoop/buckets/mold/src/windows"
+scoop config SCOOP_REPO 'https://github.com/Ash258/Scoop-Core'
 
-. $windowsRoot/install-dotnet.ps1
-
-dotnet fsi $windowsRoot/install.fsx
-
-. $windowsRoot/install-scoop-extras.ps1
+scoop update
 
 scoop bucket add extras
+scoop bucket add jetbrains
+
+scoop install main/dotnet-sdk
+scoop install extras/anydesk
+scoop install extras/fork
+scoop install extras/synctrayzor
+scoop install jetbrains/rider-portable
+
+# git clone https://github.com/fc1943s/rss.git $env:userprofile/home/fs/repos/rss
+
+$windowsRoot = "$scoop/buckets/mold/src/windows"
+# . $windowsRoot/install-scoop-extras.ps1
+# . $windowsRoot/install-dotnet.ps1
+echo fsharp starting...
+dotnet fsi $windowsRoot/install.fsx
 
 Read-Host -Prompt "Script finished. Restart manually if needed. Press any key to close"
