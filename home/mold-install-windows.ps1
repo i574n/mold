@@ -18,11 +18,11 @@ if(!$(gcm scoop)) {
 	scoop install main/git
 
 	scoop bucket add mold https://github.com/fc1943s/mold.git
-	
+
 	[Environment]::SetEnvironmentVariable('SCOOP', $scoop, 'User')
 	[Environment]::SetEnvironmentVariable('MOLD', $mold, 'User')
-	
-	[Environment]::SetEnvironmentVariable('PATH', "$env:PATH;" + 
+
+	[Environment]::SetEnvironmentVariable('PATH', "$env:PATH;" +
 	    "$mold/home/path/windows;" +
 		"$scoop\persist\rustup\.cargo\bin;" +
 		"$scoop\apps\nvm\current\nodejs\nodejs;" +
@@ -36,6 +36,7 @@ scoop update
 
 scoop bucket add extras
 scoop bucket add jetbrains
+scoop bucket add nerd-fonts
 
 scoop install main/gsudo
 
