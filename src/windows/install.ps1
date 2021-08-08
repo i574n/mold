@@ -25,7 +25,7 @@ C:\Users\root\scoop\apps\vscode-insiders-portable\current\vscode-install-context
 # git clone https://github.com/fc1943s/rss.git $env:userprofile/home/fs/repos/rss
 
 
-echo "let env=""idea""`r`n`r`nsource $env:mold/imfiles/core.vim" > $env:userprofile/.ideavimrc
+echo "let env=""idea""`r`n`r`nsource $env:mold/vimfiles/core.vim" > $env:userprofile/.ideavimrc
 echo "let env=""sh""`r`n`r`nsource $env:mold/vimfiles/core.vim" > $env:userprofile/.vimrc
 
 if(![System.IO.File]::Exists("./mold-install-windows-sudo.ps1")) {
