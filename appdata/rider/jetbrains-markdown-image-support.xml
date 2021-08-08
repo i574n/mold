@@ -1,0 +1,10 @@
+<application>
+  <component name="MISConfigService">
+    <option name="localFileEnabled" value="true" />
+    <option name="localFileImageQuality" value="70" />
+    <option name="localFileNewFilenameTemplate" value="${MDFile}-${Timestamp}.${Suffix}" />
+    <option name="localFileSavePathCustomText" value="docs/images/" />
+    <option name="localFileSavePathTemplate" value="Custom.." />
+    <option name="qiniuNewFilenameTemplate" value="images/${MDFile}/${Timestamp}.${Suffix}" />
+  </component>
+</application>
