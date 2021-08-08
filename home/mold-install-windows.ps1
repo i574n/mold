@@ -5,6 +5,13 @@ $mold = "$scoop/buckets/mold"
 $osPath = "$mold/home/path/windows"
 
 if(!$(gcm scoop)) {
+	$explorerAdvancedKey = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
+	Set-ItemProperty $explorerAdvancedKey HideFileExt 0
+	Set-ItemProperty $explorerAdvancedKey ShowSuperHidden 1
+	Set-ItemProperty $explorerAdvancedKey Hidden 1
+	Set-ItemProperty $explorerAdvancedKey TaskbarGlomLevel 2
+	Set-ItemProperty $explorerAdvancedKey PersistBrowsers 1
+
 	Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
 
 	scoop install main/7zip
@@ -29,6 +36,8 @@ scoop update
 scoop bucket add extras
 scoop bucket add jetbrains
 
+scoop install main/gsudo
+
 scoop install main/dotnet-sdk
 scoop install extras/anydesk
 scoop install extras/fork
@@ -36,7 +45,9 @@ scoop install extras/synctrayzor
 scoop install jetbrains/rider-portable
 
 # git clone https://github.com/fc1943s/rss.git $env:userprofile/home/fs/repos/rss
-New-Item -Path $scoop/persist/rider-portable/profile/config/settingsRepository/repository -ItemType SymbolicLink -Value $mold/home/appdata/rider
+
+sudo ./mold-install-windows-sudo.ps1
+
 
 $windowsRoot = "$scoop/buckets/mold/src/windows"
 # . $windowsRoot/install-scoop-extras.ps1
