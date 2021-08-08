@@ -22,9 +22,6 @@ Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Keyboard Layout' `
 	-Value ([byte[]](0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00,     `
 			0x64, 0x00, 0x01, 0x00, 0x01, 0x00, 0x3a, 0x00, 0x00, 0x00, 0x00, 00))
 
+mkdir $env:scoop/persist/rider-portable/profile/config/settingsRepository
+New-Item -Path $env:scoop/persist/rider-portable/profile/config/settingsRepository/repository -ItemType SymbolicLink -Value $env:mold/home/appdata/rider
 
-$scoop = "$env:userprofile/scoop"
-$mold = "$scoop/buckets/mold"
-
-mkdir $scoop/persist/rider-portable/profile/config/settingsRepository
-New-Item -Path $scoop/persist/rider-portable/profile/config/settingsRepository/repository -ItemType SymbolicLink -Value $mold/home/appdata/rider

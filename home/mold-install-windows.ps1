@@ -2,7 +2,7 @@ Write-Output 'Installing mold...'
 
 $scoop = "$env:userprofile/scoop"
 $mold = "$scoop/buckets/mold"
-$osPath = "$mold/home/path/windows"
+$osPath = "$mold/home/windows/path"
 
 if(!$(gcm scoop)) {
 	$explorerAdvancedKey = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
@@ -19,9 +19,10 @@ if(!$(gcm scoop)) {
 
 	scoop bucket add mold https://github.com/fc1943s/mold.git
 	
-	[Environment]::SetEnvironmentVariable('scoop', $scoop, 'User')
+	[Environment]::SetEnvironmentVariable('SCOOP', $scoop, 'User')
+	[Environment]::SetEnvironmentVariable('MOLD', $mold, 'User')
 	
-	[Environment]::SetEnvironmentVariable('Path', "$env:Path;" + 
+	[Environment]::SetEnvironmentVariable('PATH', "$env:PATH;" + 
 	    "$mold/home/path/windows;" +
 		"$scoop\persist\rustup\.cargo\bin;" +
 		"$scoop\apps\nvm\current\nodejs\nodejs;" +
@@ -45,6 +46,10 @@ scoop install extras/synctrayzor
 scoop install jetbrains/rider-portable
 
 # git clone https://github.com/fc1943s/rss.git $env:userprofile/home/fs/repos/rss
+
+
+echo "let env=""idea""`r`nsource $env:mold/vimfiles/core.vim" > $env:userprofile/.ideavimrc
+echo "let env=""sh""`r`nsource $env:mold/vimfiles/core.vim" > $env:userprofile/.vimrc
 
 sudo ./mold-install-windows-sudo.ps1
 
