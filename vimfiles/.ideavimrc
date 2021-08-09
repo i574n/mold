@@ -1,0 +1,2 @@
+let env="idea"
+source ~/scoop/buckets/mold/vimfiles/core.vim

@@ -12,8 +12,8 @@ function WindowsFeature {
     }
 }
 
-Add-MpPreference -ExclusionPath "C:\Users\$env:UserName\scoop"
-Add-MpPreference -ExclusionPath 'C:\ProgramData\scoop'
+Add-MpPreference -ExclusionPath "$env:scoop"
+Add-MpPreference -ExclusionPath 'C:/ProgramData/scoop'
 
 WindowsFeature -FeatureName Microsoft-Hyper-V
 WindowsFeature -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -47,6 +47,8 @@ Get-ChildItem "$env:mold/fonts" | ForEach-Object {
 
 reg import "$env:scoop/apps/vscode-insiders-portable/current/vscode-install-context.reg"
 
+New-Item -Path "$env:userprofile/.ideavimrc" -ItemType SymbolicLink -Value $env:mold/vimfiles/.ideavimrc
+New-Item -Path "$env:userprofile/.vimrc" -ItemType SymbolicLink -Value $env:mold/vimfiles/.vimrc
 
 # mkdir $env:scoop/persist/rider-portable/profile/config/settingsRepository
 # New-Item -Path "$env:scoop/persist/rider-portable/profile/config/settingsRepository/repository" -ItemType SymbolicLink -Value $env:mold/home/appdata/rider
