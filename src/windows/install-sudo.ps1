@@ -47,8 +47,13 @@ Get-ChildItem "$env:mold/fonts" | ForEach-Object {
 
 reg import "$env:scoop/apps/vscode-insiders-portable/current/vscode-install-context.reg"
 
-New-Item -Path "$env:userprofile/.ideavimrc" -ItemType SymbolicLink -Value $env:mold/vimfiles/.ideavimrc
-New-Item -Path "$env:userprofile/.vimrc" -ItemType SymbolicLink -Value $env:mold/vimfiles/.vimrc
+if(![System.IO.File]::Exists("$env:userprofile/.ideavimrc")){
+    New-Item -Path "$env:userprofile/.ideavimrc" -ItemType SymbolicLink -Value $env:mold/vimfiles/.ideavimrc
+}
+
+if(![System.IO.File]::Exists("$env:userprofile/.vimrc")){
+    New-Item -Path "$env:userprofile/.vimrc" -ItemType SymbolicLink -Value $env:mold/vimfiles/.vimrc
+}
 
 # mkdir $env:scoop/persist/rider-portable/profile/config/settingsRepository
 # New-Item -Path "$env:scoop/persist/rider-portable/profile/config/settingsRepository/repository" -ItemType SymbolicLink -Value $env:mold/home/appdata/rider
