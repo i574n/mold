@@ -1,4 +1,4 @@
-printfn $"fsharp start"
+printfn $"fsharp extras start"
 
 #r "nuget: Argu"
 #r "nuget: Fake.Core.Process"
@@ -13,6 +13,6 @@ open Fake.IO
 
 
 
-printfn $"fsharp end"
+printfn $"fsharp extras end"
 
 Core.pause ()

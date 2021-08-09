@@ -64,4 +64,13 @@ if(![System.IO.Directory]::Exists("$env:mold/home/appdata/rider/.git")){
     popd
 }
 
+scoop install extras/vcredist2019
+scoop install extras/vcredist2015
+scoop install extras/vcredist2013
+scoop install extras/vcredist2005
+
+scoop install main/nvm
+nvm install latest
+nvm use $( nvm list )
+
 scoop install nerd-fonts/FiraCode

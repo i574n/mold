@@ -19,7 +19,7 @@ if(!$(gcm scoop)) {
     [Environment]::SetEnvironmentVariable('MOLD', $env:mold, 'User')
 
     [Environment]::SetEnvironmentVariable('PATH', "$env:PATH;" +
-        "$env:mold/home/path/windows;" +
+        "$env:mold/home/windows/path;" +
         "$env:scoop\persist\rustup\.cargo\bin;" +
         "$env:scoop\apps\nvm\current\nodejs\nodejs;" +
         "$env:scoop\apps\cygwin\current\root\bin"
