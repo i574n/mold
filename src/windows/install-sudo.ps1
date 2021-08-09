@@ -45,6 +45,9 @@ Get-ChildItem "$env:mold/fonts" | ForEach-Object {
     }
 }
 
+reg import "$env:scoop/apps/vscode-insiders-portable/current/vscode-install-context.reg"
+
+
 # mkdir $env:scoop/persist/rider-portable/profile/config/settingsRepository
 # New-Item -Path "$env:scoop/persist/rider-portable/profile/config/settingsRepository/repository" -ItemType SymbolicLink -Value $env:mold/home/appdata/rider
 # "$env:mold/home/appdata/rider"
