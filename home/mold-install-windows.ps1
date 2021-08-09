@@ -1,7 +1,7 @@
 Write-Output 'Installing mold...'
 
-$scoop = "$env:userprofile/scoop"
-$mold = "$scoop/buckets/mold"
+$env:scoop = "$env:userprofile/scoop"
+$env:mold = "$env:scoop/buckets/mold"
 
 if(!$(gcm scoop)) {
     Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
@@ -15,16 +15,16 @@ if(!$(gcm scoop)) {
 
     scoop update
 
-    [Environment]::SetEnvironmentVariable('SCOOP', $scoop, 'User')
-    [Environment]::SetEnvironmentVariable('MOLD', $mold, 'User')
+    [Environment]::SetEnvironmentVariable('SCOOP', $env:scoop, 'User')
+    [Environment]::SetEnvironmentVariable('MOLD', $env:mold, 'User')
 
     [Environment]::SetEnvironmentVariable('PATH', "$env:PATH;" +
-        "$mold/home/path/windows;" +
-        "$scoop\persist\rustup\.cargo\bin;" +
-        "$scoop\apps\nvm\current\nodejs\nodejs;" +
-        "$scoop\apps\cygwin\current\root\bin"
+        "$env:mold/home/path/windows;" +
+        "$env:scoop\persist\rustup\.cargo\bin;" +
+        "$env:scoop\apps\nvm\current\nodejs\nodejs;" +
+        "$env:scoop\apps\cygwin\current\root\bin"
     , 'User')
 
 }
 
-. "$mold/src/windows/install.ps1"
+. "$env:mold/src/windows/install.ps1"
