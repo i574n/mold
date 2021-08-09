@@ -62,8 +62,8 @@ noremap <leader>nm ggcenamespace<esc>Eviw"mxxo<esc>omodule <esc>"mpa =<esc>o()<e
 noremap <leader><leader>' i````<Esc>hi
 inoremap <leader><leader>' ````<Esc>hi
 
-noremap <leader><leader>/ i／
-inoremap <leader><leader>/ ／
+"" noremap <leader><leader>/ i／
+"" inoremap <leader><leader>/ ／
 
 nnoremap <leader>[ ?let <CR>:noh<CR>
 nnoremap <leader>] /let <CR>:noh<CR>
@@ -146,14 +146,13 @@ nnoremap <leader>= j
 
 
 nnoremap ! j
-nnoremap <t	ab> j
+"" nnoremap <tab> j
 nnoremap <s-tab> j
 nnoremap <s-f1> j
 nnoremap <s-f5> j
 nnoremap <c-k> j
 nnoremap ,d j
 nnoremap <leader><leader> j
-nnoremap <leader>4 j
 nnoremap <leader>j j
 nnoremap <leader>J k
 
