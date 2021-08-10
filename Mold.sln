@@ -11,7 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "repo", "repo", "{A22AFCB5-6
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Vm1", "src\Vm1\Vm1.fsproj", "{3C5C0224-913B-41E8-AA9E-782D987A6299}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vimfiles", "vimfiles\Vimfiles.proj", "{DE219147-04C3-4481-925D-EB8503D65E85}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vimfiles", "vimfiles", "{B0F1AB1E-DB46-4425-8A21-6FC7D19C13AB}"
+	ProjectSection(SolutionItems) = preProject
+		vimfiles/core.vim = vimfiles/core.vim
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,9 +26,5 @@ Global
 		{3C5C0224-913B-41E8-AA9E-782D987A6299}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C5C0224-913B-41E8-AA9E-782D987A6299}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C5C0224-913B-41E8-AA9E-782D987A6299}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DE219147-04C3-4481-925D-EB8503D65E85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE219147-04C3-4481-925D-EB8503D65E85}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE219147-04C3-4481-925D-EB8503D65E85}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE219147-04C3-4481-925D-EB8503D65E85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
