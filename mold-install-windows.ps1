@@ -9,7 +9,7 @@ if(!$(gcm scoop)) {
     scoop install main/7zip
     scoop install main/git
 
-    scoop config SCOOP_REPO 'https://github.com/Ash258/Scoop-Core'
+    scoop config SCOOP_REPO 'https://github.com/fc1943s/Scoop-Core'
 
     scoop bucket add mold https://github.com/fc1943s/mold.git
 
