@@ -1,9 +1,16 @@
+# Get-TimeZone -ListAvailable
+Set-TimeZone ($env:MOLD_TIMEZONE, "E. South America Standard Time" | Select -First 1) # -3
+
+Set-WinUserLanguageList -LanguageList ($env:MOLD_KEYBOARD, "pt-BR" | Select -First 1) -Force
+
 $explorerAdvancedKey = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
 Set-ItemProperty $explorerAdvancedKey HideFileExt 0
 Set-ItemProperty $explorerAdvancedKey ShowSuperHidden 1
 Set-ItemProperty $explorerAdvancedKey Hidden 1
 Set-ItemProperty $explorerAdvancedKey TaskbarGlomLevel 2
+Set-ItemProperty $explorerAdvancedKey TaskbarSmallIcons 2
 Set-ItemProperty $explorerAdvancedKey PersistBrowsers 1
+Set-ItemProperty $explorerAdvancedKey NavPaneExpandToCurrentFolder 1
 
 scoop install main/aria2
 
@@ -38,6 +45,10 @@ scoop install main/dotnet-sdk
 scoop install main/pwsh
 scoop install extras/anydesk
 scoop install extras/fork
+scoop install extras/notepadplusplus
+scoop install extras/processhacker
 scoop install extras/synctrayzor
 scoop install extras/vscode-insiders-portable
 scoop install jetbrains/rider-portable
+
+winget install powertoys

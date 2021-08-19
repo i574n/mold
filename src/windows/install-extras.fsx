@@ -15,4 +15,4 @@ open Fake.IO
 
 printfn $"fsharp extras end"
 
-Core.pause ()
+//Core.pause ()
