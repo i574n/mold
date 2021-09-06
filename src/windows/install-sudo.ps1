@@ -12,6 +12,7 @@ function WindowsFeature {
     }
 }
 
+Set-MpPreference -DisableRealtimeMonitoring $true
 Add-MpPreference -ExclusionPath "$env:scoop"
 Add-MpPreference -ExclusionPath 'C:/ProgramData/scoop'
 
