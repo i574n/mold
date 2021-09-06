@@ -1,20 +1,9 @@
 {
   "devices": [
     {
-      "device-id": "Default_Monitor#4\u0026427137e\u00260\u0026UID0_1701_921_{00000000-0000-0000-0000-000000000000}",
-      "active-zoneset": {
-        "uuid": "{196ABAD0-C7C3-441E-B431-57BC414151E5}",
-        "type": "custom"
-      },
-      "editor-show-spacing": false,
-      "editor-spacing": 16,
-      "editor-zone-count": 3,
-      "editor-sensitivity-radius": 20
-    },
-    {
       "device-id": "DELD06F#5\u00261e4c758\u00260\u0026UID4357_2560_1440_{5487FDD5-0C71-41BB-B88F-68400C27C30B}",
       "active-zoneset": {
-        "uuid": "{196ABAD0-C7C3-441E-B431-57BC414151E5}",
+        "uuid": "{A260AECC-BCB2-4BD2-870D-DE4C3D2A16E7}",
         "type": "custom"
       },
       "editor-show-spacing": false,
@@ -45,17 +34,6 @@
       "editor-sensitivity-radius": 20
     },
     {
-      "device-id": "DELD06F#5\u00261e4c758\u00260\u0026UID4357_1920_1200_{5487FDD5-0C71-41BB-B88F-68400C27C30B}",
-      "active-zoneset": {
-        "uuid": "{F269AD33-0BDD-47F4-8AC9-DC2D87144767}",
-        "type": "priority-grid"
-      },
-      "editor-show-spacing": true,
-      "editor-spacing": 16,
-      "editor-zone-count": 3,
-      "editor-sensitivity-radius": 20
-    },
-    {
       "device-id": "DELF071#5\u00261e4c758\u00260\u0026UID4354_1920_1080_{7FC5CC7D-1671-4BF0-8126-E2C876F35A5C}",
       "active-zoneset": {
         "uuid": "{DE41C671-426B-485B-9050-417BC763B499}",
@@ -67,9 +45,9 @@
       "editor-sensitivity-radius": 20
     },
     {
-      "device-id": "DELD06F#5\u00261e4c758\u00260\u0026UID4357_1920_1080_{5487FDD5-0C71-41BB-B88F-68400C27C30B}",
+      "device-id": "DELD06F#5\u00261e4c758\u00260\u0026UID4357_1920_1200_{5487FDD5-0C71-41BB-B88F-68400C27C30B}",
       "active-zoneset": {
-        "uuid": "{4E137793-CDC6-49A3-B2C1-27A38F3F03DB}",
+        "uuid": "{F269AD33-0BDD-47F4-8AC9-DC2D87144767}",
         "type": "priority-grid"
       },
       "editor-show-spacing": true,
@@ -81,6 +59,17 @@
       "device-id": "DELD06F#5\u00261e4c758\u00260\u0026UID4357_1366_768_{5487FDD5-0C71-41BB-B88F-68400C27C30B}",
       "active-zoneset": {
         "uuid": "{2FAF751F-597D-4787-B170-95DA42C37C46}",
+        "type": "priority-grid"
+      },
+      "editor-show-spacing": true,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "DELD06F#5\u00261e4c758\u00260\u0026UID4357_1920_1080_{5487FDD5-0C71-41BB-B88F-68400C27C30B}",
+      "active-zoneset": {
+        "uuid": "{4E137793-CDC6-49A3-B2C1-27A38F3F03DB}",
         "type": "priority-grid"
       },
       "editor-show-spacing": true,
@@ -111,9 +100,9 @@
       "editor-sensitivity-radius": 20
     },
     {
-      "device-id": "DELD06F#5\u00261e4c758\u00260\u0026UID4357_1280_960_{5487FDD5-0C71-41BB-B88F-68400C27C30B}",
+      "device-id": "DELD06F#5\u00261e4c758\u00260\u0026UID4357_1600_1200_{5487FDD5-0C71-41BB-B88F-68400C27C30B}",
       "active-zoneset": {
-        "uuid": "{A8BB70F9-D4D5-4312-BFD8-810BD7236263}",
+        "uuid": "{60C7F7B3-D0E1-4485-B4CE-0329B9D71AE4}",
         "type": "priority-grid"
       },
       "editor-show-spacing": true,
@@ -122,9 +111,9 @@
       "editor-sensitivity-radius": 20
     },
     {
-      "device-id": "DELD06F#5\u00261e4c758\u00260\u0026UID4357_1600_1200_{5487FDD5-0C71-41BB-B88F-68400C27C30B}",
+      "device-id": "DELD06F#5\u00261e4c758\u00260\u0026UID4357_1280_960_{5487FDD5-0C71-41BB-B88F-68400C27C30B}",
       "active-zoneset": {
-        "uuid": "{60C7F7B3-D0E1-4485-B4CE-0329B9D71AE4}",
+        "uuid": "{A8BB70F9-D4D5-4312-BFD8-810BD7236263}",
         "type": "priority-grid"
       },
       "editor-show-spacing": true,
@@ -197,6 +186,17 @@
       "editor-spacing": 16,
       "editor-zone-count": 3,
       "editor-sensitivity-radius": 20
+    },
+    {
+      "device-id": "Default_Monitor#4\u0026427137e\u00260\u0026UID0_1701_921_{5487FDD5-0C71-41BB-B88F-68400C27C30B}",
+      "active-zoneset": {
+        "uuid": "{196ABAD0-C7C3-441E-B431-57BC414151E5}",
+        "type": "custom"
+      },
+      "editor-show-spacing": false,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
     }
   ],
   "custom-zone-sets": [
@@ -223,6 +223,31 @@
           [
             0,
             2
+          ]
+        ],
+        "show-spacing": false,
+        "spacing": 16,
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{A260AECC-BCB2-4BD2-870D-DE4C3D2A16E7}",
+      "name": "Single Screen 2",
+      "type": "grid",
+      "info": {
+        "rows": 1,
+        "columns": 2,
+        "rows-percentage": [
+          10000
+        ],
+        "columns-percentage": [
+          5550,
+          4450
+        ],
+        "cell-child-map": [
+          [
+            0,
+            1
           ]
         ],
         "show-spacing": false,
@@ -275,5 +300,14 @@
       "sensitivity-radius": 20
     }
   ],
-  "quick-layout-keys": []
+  "quick-layout-keys": [
+    {
+      "key": 1,
+      "uuid": "{196ABAD0-C7C3-441E-B431-57BC414151E5}"
+    },
+    {
+      "key": 2,
+      "uuid": "{A260AECC-BCB2-4BD2-870D-DE4C3D2A16E7}"
+    }
+  ]
 }
