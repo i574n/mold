@@ -1,6 +1,17 @@
 {
   "devices": [
     {
+      "device-id": "Default_Monitor#4\u0026427137e\u00260\u0026UID0_1701_921_{00000000-0000-0000-0000-000000000000}",
+      "active-zoneset": {
+        "uuid": "{A260AECC-BCB2-4BD2-870D-DE4C3D2A16E7}",
+        "type": "custom"
+      },
+      "editor-show-spacing": false,
+      "editor-spacing": 16,
+      "editor-zone-count": 3,
+      "editor-sensitivity-radius": 20
+    },
+    {
       "device-id": "DELD06F#5\u00261e4c758\u00260\u0026UID4357_2560_1440_{5487FDD5-0C71-41BB-B88F-68400C27C30B}",
       "active-zoneset": {
         "uuid": "{A260AECC-BCB2-4BD2-870D-DE4C3D2A16E7}",
@@ -241,8 +252,8 @@
           10000
         ],
         "columns-percentage": [
-          5550,
-          4450
+          5903,
+          4097
         ],
         "cell-child-map": [
           [
