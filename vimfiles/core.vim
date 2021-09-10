@@ -57,7 +57,7 @@ noremap <leader>2 "zY
 noremap <leader>3 "zp
 noremap <leader>4 "zd
 
-noremap <leader>gl Olet getLocals () = $"0={0} {getLocals ()<Esc>0jw
+noremap <leader>gl Olet getLocals () = $"0={0} {getLocals ()}"<Esc>0jw
 noremap <leader>nm ggcenamespace<esc>Eviw"mxxo<esc>omodule <esc>"mpa =<esc>o()<esc>>>
 
 noremap <leader><leader>' i````<Esc>hi
