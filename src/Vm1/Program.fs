@@ -29,19 +29,19 @@ module Vm1 =
         }
 
     let rec vm1 =
-        let scriptUrl = "https://gist.githubusercontent.com/fc1943s/e02c64f526fe279eb9397592d2bd1c3b/raw/mold.ps1"
+        let scriptUrl = "https://fc1943s.github.io/mold/mold-install-windows.ps1"
 
         vm {
             name (nameof vm1)
             username (nameof vm1)
             vm_size Vm.Standard_A2
-            operating_system Vm.WindowsServer_2019Datacenter
+            operating_system Vm.Windows10Pro
             os_disk 128 Vm.StandardSSD_LRS
             link_to_vnet (vnet1 (nameof vm1))
 
             custom_script (
                 " powershell \" & { "
-                + "$f = Join-Path $env:USERPROFILE 'mold.ps1'; "
+                + "$f = Join-Path $env:USERPROFILE 'mold-install-windows.ps1'; "
                 + $"irm {scriptUrl}?t={System.DateTime.UtcNow.Ticks} > $f; "
                 + $"& $f -username {nameof vm1}; }} \" "
             )
