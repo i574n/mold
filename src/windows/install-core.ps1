@@ -43,6 +43,7 @@ scoop bucket add scoop-completion https://github.com/Moeologist/scoop-completion
 
 scoop install main/dotnet-sdk
 scoop install main/pwsh
+scoop install main/neovim
 scoop install extras/anydesk
 scoop install extras/fork
 scoop install extras/notepadplusplus
