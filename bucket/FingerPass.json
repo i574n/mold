@@ -1,0 +1,23 @@
+{
+    "version": "1.1.0",
+    "description": "Windows tray app to paste a password after scanning a fingerprint",
+    "homepage": "https://gazugafan.github.io/fingerpass",
+    "url": "https://github.com/gazugafan/fingerpass/releases/download/1.1.0/FingerPassSetup.msi",
+    "hash": "4b215148ed382d2a92d7f676a6ca93b8380bca6a9d530ba106aa2c2f27f3a45b",
+	"pre_install": [
+        "$splat = @{ 'ExtractDir' = $manifest.extract_dir; 'Removal' = $true }",
+        "Expand-7zipArchive \"$dir\\FingerPassSetup.msi\" @splat",
+		"echo pre_install"
+    ],
+    "bin": "fingerpass.exe",
+    "shortcuts": [
+        [
+            "fingerpass.exe",
+            "FingerPass"
+        ]
+    ],
+    "checkver": "FingerPass\\s*v([\\d.]+)",
+    "autoupdate": {
+        "url": "https://github.com/gazugafan/fingerpass/releases/download/1.1.0/FingerPassSetup.msi"
+    }
+}

@@ -34,7 +34,7 @@ module Vm1 =
         vm {
             name (nameof vm1)
             username (nameof vm1)
-            vm_size Vm.Standard_A2
+            vm_size Vm.Standard_D2_v3
             operating_system Vm.Windows10Pro
             os_disk 128 Vm.StandardSSD_LRS
             link_to_vnet (vnet1 (nameof vm1))
