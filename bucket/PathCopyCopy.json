@@ -1,18 +1,18 @@
 {
-    "version": "19.0",
+    "version": "20.0",
     "description": "Copy file paths from Windows explorer's contextual menu",
     "homepage": "https://pathcopycopy.github.io/",
-    "url": "https://github.com/clechasseur/pathcopycopy/releases/download/v19.0/PathCopyCopy19.0.exe",
-    "hash": "4b215148ed382d2a92d7f676a6ca93b8380bca6a9d530ba106aa2c2f27f3a45b",
-    "bin": "PathCopyCopy19.0.exe",
+    "url": "https://github.com/clechasseur/pathcopycopy/releases/download/v20.0/PathCopyCopy20.0.exe",
+    "hash": "1cd49bdd01d4543a3022a09bc4f638a6faa1637f5aa1664e2c456a02c42dc3e1",
+    "bin": "PathCopyCopy20.0.exe",
     "shortcuts": [
         [
-            "PathCopyCopy19.0.exe",
+            "PathCopyCopy20.0.exe",
             "path-copy-copy"
         ]
     ],
     "checkver": "PathCopyCopy\\s*v([\\d.]+)",
     "autoupdate": {
-        "url": "https://github.com/clechasseur/pathcopycopy/releases/download/v19.0/PathCopyCopy19.0.exe"
+        "url": "https://github.com/clechasseur/pathcopycopy/releases/download/v20.0/PathCopyCopy20.0.exe"
     }
 }

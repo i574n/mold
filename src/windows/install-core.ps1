@@ -1,3 +1,5 @@
+$win10 = [System.Environment]::OSVersion.Version.Build -lt 19200
+
 # Get-TimeZone -ListAvailable
 Set-TimeZone ($env:MOLD_TIMEZONE, "E. South America Standard Time" | Select -First 1) # -3
 
@@ -51,5 +53,9 @@ scoop install extras/processhacker
 scoop install extras/synctrayzor
 scoop install extras/vscode-insiders-portable
 scoop install jetbrains/rider-portable
+
+if($win10) {
+    scoop install Ash258/winget
+}
 
 winget install powertoys

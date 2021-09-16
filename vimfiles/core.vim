@@ -57,6 +57,7 @@ noremap <leader>2 "zY
 noremap <leader>3 "zp
 noremap <leader>4 "zd
 
+noremap <leader>gl Olet getLocals () = $"0={0} {getLocals ()}"<Esc>0jw
 noremap <leader>nm ggcenamespace<esc>Eviw"mxxo<esc>omodule <esc>"mpa =<esc>o()<esc>>>
 
 noremap <leader><leader>' i````<Esc>hi
@@ -126,33 +127,33 @@ endif
 
 
 
-nnoremap <c-[> j
-nnoremap <c-]> j
-nnoremap <c-\> j
-nnoremap <c-s-[> k
-nnoremap <c-s-]> k
-nnoremap <c-s-\> k
+nnoremap <c-[> <nop>
+nnoremap <c-]> <nop>
+nnoremap <c-\> <nop>
+nnoremap <c-s-[> <nop>
+nnoremap <c-s-]> <nop>
+nnoremap <c-s-\> <nop>
 
-nnoremap ; j
-nnoremap <c-;> j
-nnoremap <c-s-;> j
+nnoremap ; <nop>
+nnoremap <c-;> <nop>
+nnoremap <c-s-;> <nop>
 
-nnoremap <leader>< k
-nnoremap <leader>> j
-nnoremap <leader>- k
-nnoremap <leader>= j
-
-
+nnoremap <leader>< <nop>
+nnoremap <leader>> <nop>
+nnoremap <leader>- <nop>
+nnoremap <leader>= <nop>
 
 
-nnoremap ! j
-"" nnoremap <tab> j
-nnoremap <s-tab> j
-nnoremap <s-f1> j
-nnoremap <s-f5> j
-nnoremap <c-k> j
-nnoremap ,d j
-nnoremap <leader><leader> j
-nnoremap <leader>j j
-nnoremap <leader>J k
+
+
+nnoremap ! <nop>
+"" nnoremap <tab> <nop>
+nnoremap <s-tab> <nop>
+nnoremap <s-f1> <nop>
+nnoremap <s-f5> <nop>
+nnoremap <c-k> <nop>
+nnoremap ,d <nop>
+nnoremap <leader><leader> <nop>
+nnoremap <leader>j <nop>
+nnoremap <leader>J <nop>
 
