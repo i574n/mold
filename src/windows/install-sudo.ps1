@@ -86,3 +86,5 @@ nvm use $( nvm list )
 
 scoop install nerd-fonts/FiraCode
 scoop install wsl/wsl-ubuntu2004
+
+scoop install Ash258/docker
