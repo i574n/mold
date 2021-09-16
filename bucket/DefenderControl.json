@@ -14,14 +14,14 @@
         "Expand-7zipArchive \"$dir\\$fname\" @splat",
         "Expand-7zipArchive \"$dir\\dControl.zip\" @splat"
     ],
-    "bin": "dControl.exe",
+    "bin": "dfControl.exe",
     "shortcuts": [
         [
-            "dControl.exe",
+            "dfControl.exe",
             "Sordum\\Defender Control"
         ]
     ],
-    "persist": "dControl.ini",
+    "persist": "dfControl.ini",
     "checkver": "Defender Control\\s*v([\\d.]+)",
     "autoupdate": {
         "url": "https://www.sordum.org/files/download/d-control/dControl.zip"
