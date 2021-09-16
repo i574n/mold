@@ -6,7 +6,7 @@ function WindowsFeature {
         [Parameter(Position=0,Mandatory=$true)] [string]$FeatureName
     )
     if(!$((Get-WindowsOptionalFeature -FeatureName $FeatureName -Online).State -eq "Enabled")) {
-        Enable-WindowsOptionalFeature -Online -FeatureName $FeatureName -All # asks for restart
+        Enable-WindowsOptionalFeature -Online -FeatureName $FeatureName -All -Verbose # asks for restart
     } else {
         echo "$FeatureName already installed"
     }
@@ -18,6 +18,7 @@ Add-MpPreference -ExclusionPath 'C:/ProgramData/scoop'
 
 WindowsFeature -FeatureName Microsoft-Hyper-V
 WindowsFeature -FeatureName Microsoft-Windows-Subsystem-Linux
+WindowsFeature -FeatureName Containers
 
 $policiesSystemKey = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System'
 Set-ItemProperty $policiesSystemKey PersistBrowsers 1
