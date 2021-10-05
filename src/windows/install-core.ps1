@@ -45,14 +45,28 @@ scoop bucket add scoop-completion https://github.com/Moeologist/scoop-completion
 
 scoop install main/dotnet-sdk
 scoop install main/pwsh
+scoop install mold/DefenderControl
 scoop install main/neovim
 scoop install extras/anydesk
+scoop install extras/cryptomator
+scoop install extras/discord
+scoop install extras/everything
 scoop install extras/fork
 scoop install extras/notepadplusplus
+scoop install extras/obs-studio
+scoop install extras/p4merge
 scoop install extras/processhacker
+scoop install extras/sumatrapdf
 scoop install extras/synctrayzor
+scoop install extras/sysinternals
+scoop install extras/treesize-free
 scoop install extras/vscode-insiders-portable
+scoop install extras/windirstat
+scoop install extras/winmerge
+scoop install extras/yed
 scoop install jetbrains/rider-portable
+scoop install versions/rclone-beta
+scoop install versions/vivaldi-beta
 
 if($win10) {
     scoop install Ash258/winget

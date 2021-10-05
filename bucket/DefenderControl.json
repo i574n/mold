@@ -7,7 +7,7 @@
         "url": "https://www.sordum.org/eula/"
     },
     "url": "https://www.sordum.org/files/download/d-control/dControl.zip",
-    "hash": "70ce47251e6eeda13c4ca8b9e3534767326dbb36031a1b2d120b51cc5cdff2f7",
+    "hash": "33d5083e52f05a0e777f29bdfcbaa133664ec67a533acd7d63ba2aa20f609ff9",
     "extract_dir": "dControl",
     "pre_install": [
         "$splat = @{ 'ExtractDir' = $manifest.extract_dir; 'Switches' = '-psordum'; 'Removal' = $true }",

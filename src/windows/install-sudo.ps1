@@ -86,6 +86,9 @@ nvm install latest
 nvm use $( nvm list )
 
 scoop install nerd-fonts/FiraCode
+scoop install nonportable/asio4all-np
 scoop install wsl/wsl-ubuntu2004
 
 scoop install Ash258/docker
+
+scoop install rasa/wfc
