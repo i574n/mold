@@ -58,4 +58,4 @@ if($win10) {
     scoop install Ash258/winget
 }
 
-winget install powertoys
+winget install "microsoft powertoys"
