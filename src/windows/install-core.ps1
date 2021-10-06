@@ -47,6 +47,7 @@ scoop install main/dotnet-sdk
 scoop install main/pwsh
 scoop install main/neovim
 scoop install main/yarn
+scoop install java/graalvm-jdk8
 scoop install mold/DefenderControl
 scoop install extras/anydesk
 scoop install extras/cryptomator
