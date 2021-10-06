@@ -31,6 +31,19 @@ Set-ItemProperty $policiesSystemKey PromptOnSecureDesktop 0
 Set-ItemProperty $policiesSystemKey ValidateAdminCodeSignatures 0
 Set-ItemProperty $policiesSystemKey FilterAdministratorToken 0
 
+$policiesSystemKey = 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts'
+Set-ItemProperty $policiesSystemKey "Segoe UI (TrueType)" ""
+Set-ItemProperty $policiesSystemKey "Segoe UI (TrueType)" ""
+Set-ItemProperty $policiesSystemKey "Segoe UI Bold (TrueType)" ""
+Set-ItemProperty $policiesSystemKey "Segoe UI Bold Italic (TrueType)" ""
+Set-ItemProperty $policiesSystemKey "Segoe UI Italic (TrueType)" ""
+Set-ItemProperty $policiesSystemKey "Segoe UI Light (TrueType)" ""
+Set-ItemProperty $policiesSystemKey "Segoe UI Semibold (TrueType)" ""
+Set-ItemProperty $policiesSystemKey "Segoe UI Symbol (TrueType)" ""
+
+$policiesSystemKey = 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes'
+Set-ItemProperty $policiesSystemKey "Segoe UI" "Roboto Condensed Light"
+
 Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
 Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Keyboard Layout' `
     -Name "Scancode Map" `
