@@ -10,3 +10,5 @@ if(!$(gcm choco)) {
 C:/ProgramData/chocolatey/bin/choco.exe install dotnet-6.0-sdk -y --pre
 C:/ProgramData/chocolatey/bin/choco.exe install dotnet-5.0-sdk -y --pre
 C:/ProgramData/chocolatey/bin/choco.exe install protonvpn -y --pre
+C:/ProgramData/chocolatey/bin/choco.exe install LinkShellExtension -y --pre
+C:/ProgramData/chocolatey/bin/choco.exe install p4merge -y --pre

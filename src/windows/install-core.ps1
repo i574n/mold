@@ -43,6 +43,7 @@ scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
 scoop bucket add wsl https://git.irs.sh/KNOXDEV/wsl
 scoop bucket add scoop-completion https://github.com/Moeologist/scoop-completion
 
+scoop install main/cygwin
 scoop install main/dotnet-sdk
 scoop install main/pwsh
 scoop install main/neovim
@@ -56,11 +57,11 @@ scoop install extras/everything
 scoop install extras/fork
 scoop install extras/notepadplusplus
 scoop install extras/obs-studio
-scoop install extras/p4merge
 scoop install extras/processhacker
 scoop install extras/sumatrapdf
 scoop install extras/synctrayzor
 scoop install extras/sysinternals
+scoop install extras/telegram
 scoop install extras/treesize-free
 scoop install extras/vscode-insiders-portable
 scoop install extras/windirstat
