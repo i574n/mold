@@ -1,0 +1,1 @@
+%localappdata%/Microsoft/PowerToys/FancyZones
