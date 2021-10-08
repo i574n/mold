@@ -70,6 +70,7 @@ scoop install extras/yed
 scoop install jetbrains/rider-portable
 scoop install versions/rclone-beta
 scoop install versions/vivaldi-beta
+scoop install Ash258/VirusTotalUploader
 
 if($win10) {
     scoop install Ash258/winget
