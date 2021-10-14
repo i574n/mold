@@ -53,6 +53,7 @@ scoop install mold/DefenderControl
 scoop install extras/anydesk
 scoop install extras/cryptomator
 scoop install extras/discord
+scoop install extras/electrum
 scoop install extras/everything
 scoop install extras/fork
 scoop install extras/notepadplusplus
