@@ -2,13 +2,7 @@
 
 ``` ps1
 cd $env:tmp
-curl.exe -LO fc1943s.github.io/mold/mold-install-windows.ps1
-Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-./mold-install-windows.ps1
-```
-
-
-``` ps1
-curl -LO fc1943s.github.io/mold/mold-install-linux.sh
-sh mold-install-linux.sh
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+curl.exe -LO i574n.github.io/mold/windows/install.ps1
+./install.ps1
 ```

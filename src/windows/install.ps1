@@ -9,5 +9,4 @@ sudo "$moldWindowsRoot/install-extras-sudo.ps1"
 dotnet fsi $moldWindowsRoot/install.fsx
 dotnet fsi $moldWindowsRoot/install-extras.fsx
 
-Read-Host -Prompt "Script finished. Restart manually if needed. Press any key to close"
-
+Read-Host -Prompt "src/windows/install.ps1 end (). enter..."

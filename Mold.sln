@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vimfiles", "vimfiles", "{B0
 		vimfiles/core.vim = vimfiles/core.vim
 	EndProjectSection
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Mold", "Mold.fsproj", "{63EECC67-B388-4BB1-8DAA-09DB9829E7A1}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Mold", "mold.fsproj", "{63EECC67-B388-4BB1-8DAA-09DB9829E7A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

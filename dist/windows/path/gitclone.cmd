@@ -1,6 +1,6 @@
 @echo off
 echo %1
-set dist="%userprofile%/home/fs/repos"
+set dist="%SystemDrive%/home/git"
 echo %dist%
 cd /D %dist%
 git clone %1

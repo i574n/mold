@@ -1,4 +1,4 @@
-Write-Output "Installing mold (sudo)..."
+echo "install-sudo.ps1 ()"
 
 function WindowsFeature {
     [CmdletBinding()]
@@ -62,7 +62,7 @@ Get-ChildItem "$env:mold/fonts" | ForEach-Object {
     }
 }
 
-reg import "$env:scoop/apps/vscode-insiders-portable/current/vscode-install-context.reg"
+reg import "$env:scoop/apps/vscode/current/install-context.reg"
 
 if(![System.IO.File]::Exists("$env:userprofile/.ideavimrc")){
     New-Item -Path "$env:userprofile/.ideavimrc" -ItemType SymbolicLink -Value $env:mold/vimfiles/.ideavimrc
@@ -73,18 +73,18 @@ if(![System.IO.File]::Exists("$env:userprofile/.vimrc")){
 }
 
 if(![System.IO.File]::Exists("$env:LOCALAPPDATA/Microsoft/PowerToys")){
-    New-Item -Path "$env:LOCALAPPDATA/Microsoft/PowerToys/FancyZones" -ItemType SymbolicLink -Value $env:mold/home/appdata/FancyZones
+    New-Item -Path "$env:LOCALAPPDATA/Microsoft/PowerToys/FancyZones" -ItemType SymbolicLink -Value $env:mold/dist/appdata/FancyZones
 }
 
 
 # mkdir $env:scoop/persist/rider-portable/profile/config/settingsRepository
-# New-Item -Path "$env:scoop/persist/rider-portable/profile/config/settingsRepository/repository" -ItemType SymbolicLink -Value $env:mold/home/appdata/rider
-# "$env:mold/home/appdata/rider"
+# New-Item -Path "$env:scoop/persist/rider-portable/profile/config/settingsRepository/repository" -ItemType SymbolicLink -Value $env:mold/dist/appdata/rider
+# "$env:mold/dist/appdata/rider"
 
-if(![System.IO.Directory]::Exists("$env:mold/home/appdata/rider/.git")){
+if(![System.IO.Directory]::Exists("$env:mold/dist/appdata/rider/.git")){
     pushd
     echo "initializing rider repo"
-    cd "$env:mold/home/appdata/rider"
+    cd "$env:mold/dist/appdata/rider"
     git init
     git add .
     git commit -m '.'
@@ -100,10 +100,7 @@ scoop install main/nvm
 nvm install latest
 nvm use $( nvm list )
 
-scoop install nerd-fonts/FiraCode
+scoop install -g nerd-fonts/FiraCode
 scoop install nonportable/asio4all-np
-scoop install wsl/wsl-ubuntu2004
-
-scoop install Ash258/docker
 
 scoop install rasa/wfc

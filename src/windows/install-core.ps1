@@ -1,4 +1,3 @@
-$win10 = [System.Environment]::OSVersion.Version.Build -lt 19200
 
 # Get-TimeZone -ListAvailable
 Set-TimeZone ($env:MOLD_TIMEZONE, "E. South America Standard Time" | Select -First 1) # -3
@@ -14,67 +13,53 @@ Set-ItemProperty $explorerAdvancedKey TaskbarSmallIcons 2
 Set-ItemProperty $explorerAdvancedKey PersistBrowsers 1
 Set-ItemProperty $explorerAdvancedKey NavPaneExpandToCurrentFolder 1
 
-scoop install main/aria2
+shovel install main/aria2
 
-scoop install main/dark
-scoop install main/lessmsi
-scoop install main/innounp
-scoop install main/gsudo
+shovel install main/dark
+shovel install main/lessmsi
+shovel install main/innounp
+shovel install main/gsudo
 
-scoop bucket add extras
-scoop bucket add games
-scoop bucket add java
-scoop bucket add jetbrains
-scoop bucket add nerd-fonts
-scoop bucket add nightlies
-scoop bucket add nonportable
-scoop bucket add versions
+shovel bucket add extras
+shovel bucket add games
+shovel bucket add java
+shovel bucket add jetbrains
+shovel bucket add nerd-fonts
+shovel bucket add nonportable
+shovel bucket add versions
 
-scoop bucket add Ash258 https://github.com/Ash258/Scoop-Ash258.git
-scoop bucket add dorado https://github.com/chawyehsu/dorado
-scoop bucket add emulators https://github.com/hermanjustnu/scoop-emulators.git
-scoop bucket add everyx https://github.com/everyx/scoop-bucket
-scoop bucket add rasa https://github.com/rasa/scoops.git
-scoop bucket add retools https://github.com/TheCjw/scoop-retools.git
-scoop bucket add scoop-clojure https://github.com/littleli/scoop-clojure
-scoop bucket add scoopet https://github.com/integzz/scoopet
-scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
-# scoop bucket add sushi https://github.com/kidonng/sushi
-scoop bucket add wsl https://git.irs.sh/KNOXDEV/wsl
-scoop bucket add scoop-completion https://github.com/Moeologist/scoop-completion
+shovel bucket add Ash258 https://github.com/Ash258/Scoop-Ash258.git
+shovel bucket add dorado https://github.com/chawyehsu/dorado
+shovel bucket add emulators https://github.com/hermanjustnu/scoop-emulators.git
+shovel bucket add rasa https://github.com/rasa/scoops.git
+shovel bucket add retools https://github.com/TheCjw/scoop-retools.git
+shovel bucket add scoop-clojure https://github.com/littleli/scoop-clojure
+shovel bucket add scoopet https://github.com/ivaquero/scoopet
 
-scoop install main/cygwin
-scoop install main/dotnet-sdk
-scoop install main/pwsh
-scoop install main/neovim
-scoop install main/yarn
-scoop install java/graalvm-jdk8
-scoop install mold/DefenderControl
-scoop install extras/anydesk
-scoop install extras/cryptomator
-scoop install extras/discord
-scoop install extras/electrum
-scoop install extras/everything
-scoop install extras/fork
-scoop install extras/notepadplusplus
-scoop install extras/obs-studio
-scoop install extras/processhacker
-scoop install extras/sumatrapdf
-scoop install extras/synctrayzor
-scoop install extras/sysinternals
-scoop install extras/telegram
-scoop install extras/treesize-free
-scoop install extras/vscode-insiders-portable
-scoop install extras/windirstat
-scoop install extras/winmerge
-scoop install extras/yed
-scoop install jetbrains/rider-portable
-scoop install versions/rclone-beta
-scoop install versions/vivaldi-beta
-scoop install Ash258/VirusTotalUploader
 
-if($win10) {
-    scoop install Ash258/winget
-}
+shovel install main/cygwin
+shovel install main/dotnet-sdk
+shovel install main/pwsh
+shovel install main/neovim
+shovel install main/rclone
+shovel install java/graalvm-nightly-jdk17
+shovel install extras/discord
+shovel install extras/electrum
+shovel install extras/everything
+shovel install extras/fork
+shovel install extras/notepadplusplus
+shovel install extras/obs-studio
+shovel install extras/processhacker
+shovel install extras/scoop-completion
+shovel install extras/sumatrapdf
+shovel install extras/sysinternals
+shovel install extras/telegram
+shovel install extras/treesize-free
+shovel install extras/vivaldi
+shovel install extras/vscode
+shovel install extras/windirstat
+shovel install extras/winmerge
+shovel install extras/yed
+shovel install scoop-clojure/clj-deps
 
 winget install "microsoft powertoys"

@@ -1,14 +1,12 @@
-version 6.1.0
-framework: net6.0
+version 7.0
+framework: net7.0
 storage: none
 source https://api.nuget.org/v3/index.json
 
-nuget FSharp.Core ~> 5.0
+nuget FSharp.Core >= 7.0 prerelease
 
-// Build
+nuget Fable.Core ~> 4.0 prerelease
+
 nuget Fake.Core.Target ~> 5.20 prerelease
 nuget Fake.DotNet.Cli ~> 5.20 prerelease
 nuget Fake.IO.FileSystem ~> 5.20 prerelease
-
-// Deploy
-nuget Farmer ~> 1.4
