@@ -1,8 +1,8 @@
 
 # Get-TimeZone -ListAvailable
-Set-TimeZone ($env:MOLD_TIMEZONE, "E. South America Standard Time" | Select -First 1) # -3
+Set-TimeZone ($env:MOLD_TIMEZONE, "E. South America Standard Time" | Select-Object -First 1) # -3
 
-Set-WinUserLanguageList -LanguageList ($env:MOLD_KEYBOARD, "pt-BR" | Select -First 1) -Force
+Set-WinUserLanguageList -LanguageList ($env:MOLD_KEYBOARD, "pt-BR" | Select-Object -First 1) -Force
 
 $explorerAdvancedKey = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
 Set-ItemProperty $explorerAdvancedKey HideFileExt 0
@@ -50,6 +50,7 @@ shovel install extras/fork
 shovel install extras/notepadplusplus
 shovel install extras/obs-studio
 shovel install extras/processhacker
+shovel install extras/qbittorrent
 shovel install extras/scoop-completion
 shovel install extras/sumatrapdf
 shovel install extras/sysinternals

@@ -1,0 +1,64 @@
+{
+  "custom-layouts": [
+    {
+      "uuid": "{196ABAD0-C7C3-441E-B431-57BC414151E5}",
+      "name": "Single Screen 1",
+      "type": "grid",
+      "info": {
+        "rows": 2,
+        "columns": 2,
+        "rows-percentage": [
+          6582,
+          3418
+        ],
+        "columns-percentage": [
+          5659,
+          4341
+        ],
+        "cell-child-map": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "show-spacing": false,
+        "spacing": 16,
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{A260AECC-BCB2-4BD2-870D-DE4C3D2A16E7}",
+      "name": "Single Screen 2",
+      "type": "grid",
+      "info": {
+        "rows": 2,
+        "columns": 2,
+        "rows-percentage": [
+          5310,
+          4690
+        ],
+        "columns-percentage": [
+          5903,
+          4097
+        ],
+        "cell-child-map": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "show-spacing": false,
+        "spacing": 16,
+        "sensitivity-radius": 5
+      }
+    }
+  ]
+}
