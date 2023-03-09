@@ -11,3 +11,4 @@ if (!$(Get-Command choco)) {
 C:/ProgramData/chocolatey/bin/choco.exe install protonvpn -y --pre
 C:/ProgramData/chocolatey/bin/choco.exe install LinkShellExtension -y --pre
 C:/ProgramData/chocolatey/bin/choco.exe install p4merge -y --pre
+C:/ProgramData/chocolatey/bin/choco.exe install nanum-gothic-coding-font -y --pre
