@@ -1,16 +1,20 @@
-echo "install-sudo.ps1 ()"
+Write-Output "install-sudo.ps1 ()"
 
 function WindowsFeature {
     [CmdletBinding()]
     param(
-        [Parameter(Position=0,Mandatory=$true)] [string]$FeatureName
+        [Parameter(Position = 0, Mandatory = $true)] [string]$FeatureName
     )
-    if(!$((Get-WindowsOptionalFeature -FeatureName $FeatureName -Online).State -eq "Enabled")) {
+    if (!$((Get-WindowsOptionalFeature -FeatureName $FeatureName -Online).State -eq "Enabled")) {
         Enable-WindowsOptionalFeature -Online -FeatureName $FeatureName -All -Verbose # asks for restart
-    } else {
-        echo "$FeatureName already installed"
+    }
+    else {
+        Write-Output "$FeatureName already installed"
     }
 }
+
+w32tm /config /syncfromflags:manual /manualpeerlist:"pool.ntp.org"
+
 
 Set-MpPreference -DisableRealtimeMonitoring $true
 Add-MpPreference -ExclusionPath "$env:scoop"
@@ -45,34 +49,40 @@ Set-ItemProperty $policiesSystemKey "Segoe UI Symbol (TrueType)" ""
 
 $policiesSystemKey = 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes'
 Set-ItemProperty $policiesSystemKey "Segoe UI" "Roboto Condensed Light"
+Set-ItemProperty $policiesSystemKey "Segoe WPC" "Roboto Condensed Light"
+Set-ItemProperty $policiesSystemKey "Helvetica" "Roboto Condensed Light"
+Set-ItemProperty $policiesSystemKey "Times" "Fira Code Light"
+Set-ItemProperty $policiesSystemKey "Times New Roman" "Fira Code Light"
+Set-ItemProperty $policiesSystemKey "Courier New" "Fira Code Light"
 
 Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
 Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Keyboard Layout' `
     -Name "Scancode Map" `
-    -Value ([byte[]](0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00,     `
+    -Value ([byte[]](0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, `
             0x64, 0x00, 0x01, 0x00, 0x01, 0x00, 0x3a, 0x00, 0x00, 0x00, 0x00, 00))
 
 Get-ChildItem "$env:mold/fonts" | ForEach-Object {
-    if(![System.IO.File]::Exists("$env:windir/Fonts/$_")){
+    if (![System.IO.File]::Exists("$env:windir/Fonts/$_")) {
         New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null
         Copy-Item $_.FullName -destination $env:windir/Fonts/
-        echo "$env:windir/Fonts/$_ copied"
-    } else {
-        echo "$env:windir/Fonts/$_ already exists"
+        Write-Output "$env:windir/Fonts/$_ copied"
+    }
+    else {
+        Write-Output "$env:windir/Fonts/$_ already exists"
     }
 }
 
 reg import "$env:scoop/apps/vscode/current/install-context.reg"
 
-if(![System.IO.File]::Exists("$env:userprofile/.ideavimrc")){
+if (![System.IO.File]::Exists("$env:userprofile/.ideavimrc")) {
     New-Item -Path "$env:userprofile/.ideavimrc" -ItemType SymbolicLink -Value $env:mold/vimfiles/.ideavimrc
 }
 
-if(![System.IO.File]::Exists("$env:userprofile/.vimrc")){
+if (![System.IO.File]::Exists("$env:userprofile/.vimrc")) {
     New-Item -Path "$env:userprofile/.vimrc" -ItemType SymbolicLink -Value $env:mold/vimfiles/.vimrc
 }
 
-if(![System.IO.File]::Exists("$env:LOCALAPPDATA/Microsoft/PowerToys")){
+if (![System.IO.File]::Exists("$env:LOCALAPPDATA/Microsoft/PowerToys")) {
     New-Item -Path "$env:LOCALAPPDATA/Microsoft/PowerToys/FancyZones" -ItemType SymbolicLink -Value $env:mold/dist/appdata/FancyZones
 }
 
@@ -81,14 +91,14 @@ if(![System.IO.File]::Exists("$env:LOCALAPPDATA/Microsoft/PowerToys")){
 # New-Item -Path "$env:scoop/persist/rider-portable/profile/config/settingsRepository/repository" -ItemType SymbolicLink -Value $env:mold/dist/appdata/rider
 # "$env:mold/dist/appdata/rider"
 
-if(![System.IO.Directory]::Exists("$env:mold/dist/appdata/rider/.git")){
-    pushd
-    echo "initializing rider repo"
-    cd "$env:mold/dist/appdata/rider"
+if (![System.IO.Directory]::Exists("$env:mold/dist/appdata/rider/.git")) {
+    Push-Location
+    Write-Output "initializing rider repo"
+    Set-Location "$env:mold/dist/appdata/rider"
     git init
     git add .
     git commit -m '.'
-    popd
+    Pop-Location
 }
 
 scoop install extras/vcredist2019

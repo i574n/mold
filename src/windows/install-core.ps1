@@ -61,6 +61,8 @@ shovel install extras/vscode
 shovel install extras/windirstat
 shovel install extras/winmerge
 shovel install extras/yed
+shovel install versions/syncplay-beta
+shovel install versions/vlc-nightly
 shovel install scoop-clojure/clj-deps
 
 winget install "microsoft powertoys"
