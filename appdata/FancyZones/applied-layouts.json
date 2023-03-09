@@ -1,0 +1,72 @@
+{
+  "applied-layouts": [
+    {
+      "device": {
+        "monitor": "DELD06F",
+        "monitor-instance": "5\u0026d8f9c9a\u00260\u0026UID4356",
+        "monitor-number": 4,
+        "serial-number": "YKFWP4CR0ATL",
+        "virtual-desktop": "{6B97A3C8-D162-4938-81AB-DE93204C19DF}"
+      },
+      "applied-layout": {
+        "uuid": "{A260AECC-BCB2-4BD2-870D-DE4C3D2A16E7}",
+        "type": "custom",
+        "show-spacing": false,
+        "spacing": 16,
+        "zone-count": 3,
+        "sensitivity-radius": 5
+      }
+    },
+    {
+      "device": {
+        "monitor": "SAM7088",
+        "monitor-instance": "5\u0026d8f9c9a\u00260\u0026UID4352",
+        "monitor-number": 5,
+        "serial-number": "H4ZR900123",
+        "virtual-desktop": "{6B97A3C8-D162-4938-81AB-DE93204C19DF}"
+      },
+      "applied-layout": {
+        "uuid": "{A260AECC-BCB2-4BD2-870D-DE4C3D2A16E7}",
+        "type": "custom",
+        "show-spacing": false,
+        "spacing": 16,
+        "zone-count": 3,
+        "sensitivity-radius": 5
+      }
+    },
+    {
+      "device": {
+        "monitor": "LGD032C",
+        "monitor-instance": "4\u00261cc2e93\u00260\u0026UID265988",
+        "monitor-number": 1,
+        "serial-number": "0",
+        "virtual-desktop": "{6B97A3C8-D162-4938-81AB-DE93204C19DF}"
+      },
+      "applied-layout": {
+        "uuid": "{A260AECC-BCB2-4BD2-870D-DE4C3D2A16E7}",
+        "type": "custom",
+        "show-spacing": false,
+        "spacing": 16,
+        "zone-count": 3,
+        "sensitivity-radius": 5
+      }
+    },
+    {
+      "device": {
+        "monitor": "Default_Monitor",
+        "monitor-instance": "4\u0026427137e\u00260\u0026UID0",
+        "monitor-number": 0,
+        "serial-number": "",
+        "virtual-desktop": "{6B97A3C8-D162-4938-81AB-DE93204C19DF}"
+      },
+      "applied-layout": {
+        "uuid": "{196ABAD0-C7C3-441E-B431-57BC414151E5}",
+        "type": "custom",
+        "show-spacing": false,
+        "spacing": 16,
+        "zone-count": 3,
+        "sensitivity-radius": 20
+      }
+    }
+  ]
+}
