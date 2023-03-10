@@ -47,6 +47,7 @@ shovel install extras/discord
 shovel install extras/electrum
 shovel install extras/everything
 shovel install extras/fork
+shovel install extras/kakaotalk
 shovel install extras/notepadplusplus
 shovel install extras/obs-studio
 shovel install extras/processhacker
@@ -61,6 +62,7 @@ shovel install extras/vscode
 shovel install extras/windirstat
 shovel install extras/winmerge
 shovel install extras/yed
+shovel install dorado/nftup
 shovel install versions/syncplay-beta
 shovel install versions/vlc-nightly
 shovel install scoop-clojure/clj-deps
