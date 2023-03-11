@@ -42,12 +42,14 @@ shovel install main/dotnet-sdk
 shovel install main/pwsh
 shovel install main/neovim
 shovel install main/rclone
+shovel install main/rustup
 shovel install java/graalvm-nightly-jdk17
 shovel install extras/discord
 shovel install extras/electrum
 shovel install extras/everything
 shovel install extras/fork
 shovel install extras/kakaotalk
+shovel install extras/lapce
 shovel install extras/notepadplusplus
 shovel install extras/obs-studio
 shovel install extras/processhacker
@@ -65,6 +67,8 @@ shovel install extras/yed
 shovel install dorado/nftup
 shovel install versions/syncplay-beta
 shovel install versions/vlc-nightly
+shovel install versions/dotnet-sdk-preview
+shovel install versions/dotnet3-sdk
 shovel install scoop-clojure/clj-deps
 
 winget install "microsoft powertoys"

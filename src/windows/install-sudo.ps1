@@ -152,6 +152,6 @@ nvm install latest
 nvm use $( nvm list )
 
 scoop install -g nerd-fonts/FiraCode
-scoop install nonportable/asio4all-np
+# scoop install nonportable/asio4all-np
 
 scoop install rasa/wfc
