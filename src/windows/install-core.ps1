@@ -43,11 +43,13 @@ shovel install main/pwsh
 shovel install main/neovim
 shovel install main/rclone
 shovel install main/rustup
+shovel install main/vivetool
 shovel install java/graalvm-nightly-jdk17
 shovel install extras/discord
 shovel install extras/electrum
 shovel install extras/everything
 shovel install extras/fork
+shovel install extras/handbrake
 shovel install extras/kakaotalk
 shovel install extras/lapce
 shovel install extras/notepadplusplus
@@ -70,5 +72,6 @@ shovel install versions/vlc-nightly
 shovel install versions/dotnet-sdk-preview
 shovel install versions/dotnet3-sdk
 shovel install scoop-clojure/clj-deps
+shovel install scoop-clojure/babashka
 
 winget install "microsoft powertoys"
