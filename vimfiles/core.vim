@@ -21,26 +21,74 @@ let mapleader=" "
 let @a = "text"
 
 noremap <C-e> 7<C-e>
-noremap <leader>e 7<C-e>
+noremap <leader>ee 7<C-e>
 
 noremap <C-y> 7<C-y>
-noremap <leader>y 7<C-y>
 
-noremap <leader>f <C-f>
-noremap <leader>b <C-b>
+noremap <leader>ff <C-f>
+noremap <leader>bb <C-b>
 
-noremap <leader>sa :action $SelectAll<CR>
-noremap <leader>goto :action GotoLine<CR>
+if !exists('g:vscode')
+    noremap <leader>sa :action $SelectAll<CR>
+else
+    noremap <leader>sa <Cmd>lua require('vscode-neovim').action('editor.action.selectAll')<CR>
+endif
+
+if !exists('g:vscode')
+    noremap <leader>go :action GotoLine<CR>
+else
+    noremap <leader>go <Cmd>lua require('vscode-neovim').action('workbench.action.gotoLine')<CR>
+endif
 
 noremap <leader>m M
 noremap <leader><leader>4 $
-noremap <leader>tt :action ParameterInfo<CR>
+
+if !exists('g:vscode')
+    noremap <leader>tt :action ParameterInfo<CR>
+else
+    noremap <leader>tt <Cmd>lua require('vscode-neovim').action('editor.action.showHover')<CR>
+endif
+
+if !exists('g:vscode')
+else
+    noremap <leader>fi <Cmd>lua require('vscode-neovim').action('actions.find')<CR>
+    noremap <leader>fa <Cmd>lua require('vscode-neovim').action('workbench.action.findInFiles')<CR>
+    noremap <leader>re <Cmd>lua require('vscode-neovim').action('editor.action.startFindReplaceAction')<CR>
+    noremap <leader>ra <Cmd>lua require('vscode-neovim').action('workbench.action.replaceInFiles')<CR>
+    noremap <leader>fn <Cmd>lua require('vscode-neovim').action('editor.action.nextMatchFindAction')<CR>
+    noremap <leader>fsn <Cmd>lua require('vscode-neovim').action('editor.action.nextSelectionMatchFindAction')<CR>
+    noremap <leader>su <Cmd>lua require('vscode-neovim').action('editor.action.inlineSuggest.trigger')<CR>
+    noremap <leader>co <Cmd>lua require('vscode-neovim').action('editor.action.blockComment')<CR>
+    noremap <leader>ins <Cmd>lua require('vscode-neovim').action('editor.action.inspectTMScopes')<CR>
+    noremap <leader>cc <Cmd>lua require('vscode-neovim').action('editor.action.clipboardCopyAction')<CR>
+    noremap <leader>vv <Cmd>lua require('vscode-neovim').action('editor.action.clipboardPasteAction')<CR>
+    noremap <leader>th <Cmd>lua require('vscode-neovim').action('workbench.action.previousEditor')<CR>
+    noremap <leader>tl <Cmd>lua require('vscode-neovim').action('workbench.action.nextEditor')<CR>
+    noremap <leader>gh <Cmd>lua require('vscode-neovim').action('workbench.action.previousEditorInGroup')<CR>
+    noremap <leader>gl <Cmd>lua require('vscode-neovim').action('workbench.action.nextEditorInGroup')<CR>
+    noremap <leader>bf <Cmd>lua require('vscode-neovim').action('buildFile')<CR>
+    noremap <leader>te <Cmd>lua require('vscode-neovim').action('workbench.action.terminal.toggleTerminal')<CR>
+    noremap <leader>fsb <Cmd>lua require('vscode-neovim').action('workbench.action.focusSideBar')<CR>
+    noremap <leader>ind <Cmd>lua require('vscode-neovim').action('editor.action.indentLines')<CR>
+    noremap <leader>out <Cmd>lua require('vscode-neovim').action('editor.action.outdentLines')<CR>
+    noremap <leader>qf <Cmd>lua require('vscode-neovim').action('editor.action.quickFix')<CR>
+    noremap <leader>fd <Cmd>lua require('vscode-neovim').action('editor.action.formatDocument')<CR>
+    noremap <leader>nb <Cmd>lua require('vscode-neovim').action('workbench.action.navigateBack')<CR>
+    noremap <leader>nf <Cmd>lua require('vscode-neovim').action('workbench.action.navigateForward')<CR>
+    noremap <leader>ma <Cmd>lua require('vscode-neovim').action('notebook.cell.insertMarkdownCellAbove')<CR>
+    noremap <leader>mb <Cmd>lua require('vscode-neovim').action('notebook.cell.insertMarkdownCellAbove')<CR>
+    noremap <leader>rc :let @+ = @a<CR>
+    nmap <leader>sn Q\C[A-Z]<CR>i_<Esc>lvu
+
+
+endif
+
+
+
+
 noremap <leader>te :action ShowErrorDescription<CR>
 
-noremap <leader>js o```js<enter>```<esc>O
-noremap <leader>fs o```fs<enter>```<esc>O
-
-
+noremap <leader>bl o```<enter>```<esc>O
 
 
 noremap <leader>vv V
@@ -63,6 +111,8 @@ noremap <leader>nm ggcenamespace<esc>Eviw"mxxo<esc>omodule <esc>"mpa =<esc>o()<e
 noremap <leader><leader>' i````<Esc>hi
 inoremap <leader><leader>' ````<Esc>hi
 
+
+
 "" noremap <leader><leader>/ i／
 "" inoremap <leader><leader>/ ／
 
@@ -79,8 +129,20 @@ noremap <leader>co :action CloseAllEditorsButActive<CR>
 
 
 
-noremap <leader>ne :action GotoNextError<CR>
-noremap <leader>pe :action GotoPreviousError<CR>
+if !exists('g:vscode')
+    noremap <leader>ne :action GotoNextError<CR>
+else
+    noremap <leader>ne <Cmd>lua require('vscode-neovim').action('editor.action.marker.next')<CR>
+    noremap <leader>nE <Cmd>lua require('vscode-neovim').action('editor.action.marker.nextInFiles')<CR>
+endif
+
+if !exists('g:vscode')
+    noremap <leader>pe :action GotoPreviousError<CR>
+else
+    noremap <leader>pe <Cmd>lua require('vscode-neovim').action('editor.action.marker.prev')<CR>
+    noremap <leader>pE <Cmd>lua require('vscode-neovim').action('editor.action.marker.prevInFiles')<CR>
+endif
+
 
 noremap <leader>no :action NextOccurence<CR>
 noremap <leader>po :action PreviousOccurence<CR>
@@ -100,10 +162,10 @@ if env ==? "sh"
 
 	nnoremap <silent><esc><esc> :noh<CR>
 
-	nnoremap <leader>w /[A-Z]<CR>h:noh<CR>
-	nnoremap <leader>W /[A-Z]<CR>:noh<CR>
-	vnoremap <leader>w /[A-Z]<CR>h
-    vnoremap <leader>W /[A-Z]<CR>
+	nnoremap <leader>w /\C[A-Z_]<CR>h:noh<CR>
+	nnoremap <leader>W /\C[A-Z_]<CR>:noh<CR>
+	vnoremap <leader>w /\C[A-Z_]<CR>h
+    vnoremap <leader>W /\C[A-Z_]<CR>
 
 	vnoremap <silent>* <ESC>:call VisualSearch('/')<CR>/<CR>
 	vnoremap <silent># <ESC>:call VisualSearch('?')<CR>?<CR>
@@ -156,4 +218,3 @@ nnoremap ,d <nop>
 nnoremap <leader><leader> <nop>
 nnoremap <leader>j <nop>
 nnoremap <leader>J <nop>
-

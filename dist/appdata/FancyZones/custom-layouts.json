@@ -59,6 +59,81 @@
         "spacing": 16,
         "sensitivity-radius": 5
       }
+    },
+    {
+      "uuid": "{9674314B-FFD2-4AF5-B9F7-4B88AA175233}",
+      "name": "9",
+      "type": "grid",
+      "info": {
+        "rows": 1,
+        "columns": 2,
+        "rows-percentage": [
+          10000
+        ],
+        "columns-percentage": [
+          7730,
+          2270
+        ],
+        "cell-child-map": [
+          [
+            0,
+            1
+          ]
+        ],
+        "show-spacing": true,
+        "spacing": -1,
+        "sensitivity-radius": 1
+      }
+    },
+    {
+      "uuid": "{FADA766C-CC61-48FE-BBEB-92BB88E7A2C0}",
+      "name": "8",
+      "type": "grid",
+      "info": {
+        "rows": 1,
+        "columns": 2,
+        "rows-percentage": [
+          10000
+        ],
+        "columns-percentage": [
+          5005,
+          4995
+        ],
+        "cell-child-map": [
+          [
+            0,
+            1
+          ]
+        ],
+        "show-spacing": true,
+        "spacing": -1,
+        "sensitivity-radius": 1
+      }
+    },
+    {
+      "uuid": "{A8CEFACC-DF6C-4E98-B961-D38A29770107}",
+      "name": "8 (1)",
+      "type": "grid",
+      "info": {
+        "rows": 1,
+        "columns": 2,
+        "rows-percentage": [
+          10000
+        ],
+        "columns-percentage": [
+          5536,
+          4464
+        ],
+        "cell-child-map": [
+          [
+            0,
+            1
+          ]
+        ],
+        "show-spacing": true,
+        "spacing": -1,
+        "sensitivity-radius": 1
+      }
     }
   ]
 }
