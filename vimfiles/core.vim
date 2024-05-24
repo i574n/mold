@@ -53,6 +53,7 @@ if !exists('g:vscode')
 else
     noremap <leader>fi <Cmd>lua require('vscode-neovim').action('actions.find')<CR>
     noremap <leader>fa <Cmd>lua require('vscode-neovim').action('workbench.action.findInFiles')<CR>
+    noremap <leader>rd <Cmd>lua require('vscode-neovim').action('redo')<CR>
     noremap <leader>re <Cmd>lua require('vscode-neovim').action('editor.action.startFindReplaceAction')<CR>
     noremap <leader>ra <Cmd>lua require('vscode-neovim').action('workbench.action.replaceInFiles')<CR>
     noremap <leader>fn <Cmd>lua require('vscode-neovim').action('editor.action.nextMatchFindAction')<CR>
@@ -78,15 +79,33 @@ else
     noremap <leader>ma <Cmd>lua require('vscode-neovim').action('notebook.cell.insertMarkdownCellAbove')<CR>
     noremap <leader>mb <Cmd>lua require('vscode-neovim').action('notebook.cell.insertMarkdownCellAbove')<CR>
     noremap <leader>rc :let @+ = @a<CR>
-    nmap <leader>sn Q\C[A-Z]<CR>i_<Esc>lvu
+    "" nmap <leader>sn Q\C[A-Z]<CR>vu:normal i_<CR>
+
+    "" nmap <leader>sn Q\C[A-Z]<CR>vuvyphr_:noh<CR>
+
+    "" nmap <leader>sn f\C[A-Z]<CR>vuvyphr_:noh<CR>
+    "" nmap <leader>sn Q\C[A-Z]<CR>vuvyphr_:noh<CR>
+    "" nmap <leader>sn :find \C[A-Z]<CR>vuvyphr_<CR>
+
+    "" nmap <leader>sn :s/\C[A-Z]/_\L\0\E/<CR>
+
+    "" nmap <leader>sn Q\C[A-Z]<CR>vuvyphr_<Cmd>lua require('vscode-neovim').call('_ping')<CR>
+
+    "" nmap <leader>sn :s/\C[A-Z]/_\L\0\E/<CR><Cmd>lua require('vscode-neovim').call('_ping')<CR>
+
+    nmap <leader>sn :s/\(\C[A-Z]\)/_\L\1\E/g<CR>
+
+    "" nmap <leader>sn :call search('\C[A-Z]')<CR>vuvyphr_
+
+    "" nmap <leader>sn :let @n=":s/\\C[A-Z]/_\\L\\0\\E/<C-v><CR>"<CR>@n
+
+    "" nmap <leader>sn :let @n="Q\C[A-Z]<C-v><CR>"<CR>@nvuvyphr_
 
 
 endif
 
 
-
-
-noremap <leader>te :action ShowErrorDescription<CR>
+"" noremap <leader>te :action ShowErrorDescription<CR>
 
 noremap <leader>bl o```<enter>```<esc>O
 
