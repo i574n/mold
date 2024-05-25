@@ -78,6 +78,13 @@ else
     noremap <leader>nf <Cmd>lua require('vscode-neovim').action('workbench.action.navigateForward')<CR>
     noremap <leader>ma <Cmd>lua require('vscode-neovim').action('notebook.cell.insertMarkdownCellAbove')<CR>
     noremap <leader>mb <Cmd>lua require('vscode-neovim').action('notebook.cell.insertMarkdownCellAbove')<CR>
+    noremap <leader>Th <Cmd>lua require('vscode-neovim').action('workbench.action.moveEditorLeftInGroup')<CR>
+    noremap <leader>Tl <Cmd>lua require('vscode-neovim').action('workbench.action.moveEditorRightInGroup')<CR>
+    noremap <leader>TH :lua for i=1,100 do require('vscode-neovim').action('workbench.action.moveEditorLeftInGroup') end<CR>
+    noremap <leader>TL :lua for i=1,100 do require('vscode-neovim').action('workbench.action.moveEditorRightInGroup') end<CR>
+
+
+
     noremap <leader>rc :let @+ = @a<CR>
     "" nmap <leader>sn Q\C[A-Z]<CR>vu:normal i_<CR>
 
