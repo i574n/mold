@@ -60,6 +60,11 @@ else
     noremap <leader>fsn <Cmd>lua require('vscode-neovim').action('editor.action.nextSelectionMatchFindAction')<CR>
     noremap <leader>su <Cmd>lua require('vscode-neovim').action('editor.action.inlineSuggest.trigger')<CR>
     noremap <leader>co <Cmd>lua require('vscode-neovim').action('editor.action.blockComment')<CR>
+    noremap <leader>CO i// <Esc>hhj
+    noremap <leader>CO vyppphr hr/hr/j
+    noremap <leader>Co 0wi// <Esc>hhj
+
+
     noremap <leader>ins <Cmd>lua require('vscode-neovim').action('editor.action.inspectTMScopes')<CR>
     noremap <leader>cc <Cmd>lua require('vscode-neovim').action('editor.action.clipboardCopyAction')<CR>
     noremap <leader>vv <Cmd>lua require('vscode-neovim').action('editor.action.clipboardPasteAction')<CR>
@@ -82,6 +87,10 @@ else
     noremap <leader>Tl <Cmd>lua require('vscode-neovim').action('workbench.action.moveEditorRightInGroup')<CR>
     noremap <leader>TH :lua for i=1,100 do require('vscode-neovim').action('workbench.action.moveEditorLeftInGroup') end<CR>
     noremap <leader>TL :lua for i=1,100 do require('vscode-neovim').action('workbench.action.moveEditorRightInGroup') end<CR>
+    noremap <leader>pi <Cmd>lua require('vscode-neovim').action('workbench.action.pinEditor')<CR>
+    noremap <leader>up <Cmd>lua require('vscode-neovim').action('workbench.action.unpinEditor')<CR>
+    noremap <leader>no <Cmd>lua require('vscode-neovim').action('notifications.clearAll')<CR>
+
 
 
 
@@ -142,16 +151,16 @@ inoremap <leader><leader>' ````<Esc>hi
 "" noremap <leader><leader>/ i／
 "" inoremap <leader><leader>/ ／
 
-nnoremap <leader>[ ?let <CR>:noh<CR>
-nnoremap <leader>] /let <CR>:noh<CR>
+"" nnoremap <leader>[ ?let <CR>:noh<CR>
+"" nnoremap <leader>] /let <CR>:noh<CR>
 
-noremap <leader>rr :action Rerun<CR>
-noremap <leader>ru :action Run<CR>
-noremap <leader>rs :action Stop<CR>
-noremap <leader>rc :action RunConfiguration<CR>
+"" noremap <leader>rr :action Rerun<CR>
+"" noremap <leader>ru :action Run<CR>
+"" noremap <leader>rs :action Stop<CR>
+"" noremap <leader>rc :action RunConfiguration<CR>
 
-noremap <leader>cn :action CloseAllNotifications<CR>
-noremap <leader>co :action CloseAllEditorsButActive<CR>
+"" noremap <leader>cn :action CloseAllNotifications<CR>
+"" noremap <leader>co :action CloseAllEditorsButActive<CR>
 
 
 
@@ -170,8 +179,8 @@ else
 endif
 
 
-noremap <leader>no :action NextOccurence<CR>
-noremap <leader>po :action PreviousOccurence<CR>
+"" noremap <leader>no :action NextOccurence<CR>
+"" noremap <leader>po :action PreviousOccurence<CR>
 
 noremap Q /
 noremap <space>Q ?
