@@ -90,6 +90,11 @@ else
     noremap <leader>pi <Cmd>lua require('vscode-neovim').action('workbench.action.pinEditor')<CR>
     noremap <leader>up <Cmd>lua require('vscode-neovim').action('workbench.action.unpinEditor')<CR>
     noremap <leader>no <Cmd>lua require('vscode-neovim').action('notifications.clearAll')<CR>
+    noremap <leader>ca <Cmd>lua require('vscode-neovim').action('notebook.cell.cancelExecution')<CR>
+    noremap <leader>ex <Cmd>lua require('vscode-neovim').action('notebook.cell.execute')<CR>
+    noremap <leader>pr <Cmd>lua require('vscode-neovim').action('workbench.action.problems.focus')<CR>
+
+
 
 
 
