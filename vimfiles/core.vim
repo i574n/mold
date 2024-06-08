@@ -1,3 +1,5 @@
+let env = exists('env') ? g:env : 'sh'
+
 function! VisualSearch(direction)
     let l:register=@@
     normal! gvy
@@ -93,6 +95,9 @@ else
     noremap <leader>ca <Cmd>lua require('vscode-neovim').action('notebook.cell.cancelExecution')<CR>
     noremap <leader>ex <Cmd>lua require('vscode-neovim').action('notebook.cell.execute')<CR>
     noremap <leader>pr <Cmd>lua require('vscode-neovim').action('workbench.action.problems.focus')<CR>
+    noremap <leader>dr <Cmd>lua require('vscode-neovim').action('line-number-deco.disableRelativeLineNumbersForUser')<CR>
+    noremap <leader>er <Cmd>lua require('vscode-neovim').action('line-number-deco.enableRelativeLineNumbersForUser')<CR>
+
 
 
 
