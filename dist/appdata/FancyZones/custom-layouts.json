@@ -1,93 +1,8 @@
 {
   "custom-layouts": [
     {
-      "uuid": "{196ABAD0-C7C3-441E-B431-57BC414151E5}",
-      "name": "Single Screen 1",
-      "type": "grid",
-      "info": {
-        "rows": 2,
-        "columns": 2,
-        "rows-percentage": [
-          6582,
-          3418
-        ],
-        "columns-percentage": [
-          5659,
-          4341
-        ],
-        "cell-child-map": [
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            2
-          ]
-        ],
-        "show-spacing": false,
-        "spacing": 16,
-        "sensitivity-radius": 20
-      }
-    },
-    {
-      "uuid": "{A260AECC-BCB2-4BD2-870D-DE4C3D2A16E7}",
-      "name": "Single Screen 2",
-      "type": "grid",
-      "info": {
-        "rows": 2,
-        "columns": 2,
-        "rows-percentage": [
-          5310,
-          4690
-        ],
-        "columns-percentage": [
-          5903,
-          4097
-        ],
-        "cell-child-map": [
-          [
-            0,
-            1
-          ],
-          [
-            0,
-            2
-          ]
-        ],
-        "show-spacing": false,
-        "spacing": 16,
-        "sensitivity-radius": 5
-      }
-    },
-    {
-      "uuid": "{9674314B-FFD2-4AF5-B9F7-4B88AA175233}",
-      "name": "9",
-      "type": "grid",
-      "info": {
-        "rows": 1,
-        "columns": 2,
-        "rows-percentage": [
-          10000
-        ],
-        "columns-percentage": [
-          7730,
-          2270
-        ],
-        "cell-child-map": [
-          [
-            0,
-            1
-          ]
-        ],
-        "show-spacing": true,
-        "spacing": -1,
-        "sensitivity-radius": 1
-      }
-    },
-    {
       "uuid": "{FADA766C-CC61-48FE-BBEB-92BB88E7A2C0}",
-      "name": "8",
+      "name": "1",
       "type": "grid",
       "info": {
         "rows": 1,
@@ -111,23 +26,64 @@
       }
     },
     {
-      "uuid": "{A8CEFACC-DF6C-4E98-B961-D38A29770107}",
-      "name": "8 (1)",
+      "uuid": "{1A5B6EAE-2DB5-4755-9316-BC02B8F3AF4C}",
+      "name": "2",
       "type": "grid",
       "info": {
-        "rows": 1,
-        "columns": 2,
+        "rows": 2,
+        "columns": 3,
         "rows-percentage": [
-          10000
+          7442,
+          2558
         ],
         "columns-percentage": [
-          5536,
-          4464
+          5005,
+          3052,
+          1943
         ],
         "cell-child-map": [
           [
             0,
+            1,
             1
+          ],
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "show-spacing": true,
+        "spacing": -1,
+        "sensitivity-radius": 1
+      }
+    },
+    {
+      "uuid": "{04FF7A2E-86F6-4995-9ABD-8333F5165F6B}",
+      "name": "3",
+      "type": "grid",
+      "info": {
+        "rows": 2,
+        "columns": 3,
+        "rows-percentage": [
+          7451,
+          2549
+        ],
+        "columns-percentage": [
+          5005,
+          3052,
+          1943
+        ],
+        "cell-child-map": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            3
           ]
         ],
         "show-spacing": true,
