@@ -20,7 +20,9 @@ set visualbell
 set noerrorbells
 
 let mapleader=" "
-let @a = "text"
+let @a = ":echo 1<enter>"
+let @p = "viW 4xEa |> \<esc> 3"
+noremap <leader>pp @p
 
 noremap <C-e> 7<C-e>
 noremap <leader>ee 7<C-e>
@@ -104,7 +106,7 @@ else
 
 
 
-    noremap <leader>rc :let @+ = @a<CR>
+    noremap <leader>cr :let @+ = @a<CR>
     "" nmap <leader>sn Q\C[A-Z]<CR>vu:normal i_<CR>
 
     "" nmap <leader>sn Q\C[A-Z]<CR>vuvyphr_:noh<CR>
