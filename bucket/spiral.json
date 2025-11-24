@@ -1,0 +1,24 @@
+{
+    "version": "0.0.1",
+    "description": "Spiral tooling and libraries with Notebooks support",
+    "homepage": "https://i574n.github.io/spiral",
+    "url": "https://github.com/i574n/spiral/releases/download/0.0.1/spiral.exe",
+    "hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "installer": {
+      "script": "Invoke-ExternalCommand pwsh -ArgumentList @('-c', \"echo \\\"`installer / $dir: $dir\\\"\") -RunAs"
+    },
+    "uninstaller": {
+      "script": "Invoke-ExternalCommand pwsh -ArgumentList @('-c', \"echo \\\"`uninstaller / $dir: $dir\\\"\") -RunAs"
+    },
+    "bin": "spiral/spiral.exe",
+    "shortcuts": [
+      [
+        "spiral\\spiral.exe",
+        "spiral"
+      ]
+    ],
+    "checkver": "spiral\\s*v([\\d.]+)",
+    "autoupdate": {
+        "url": "https://github.com/i574n/spiral/releases/download/0.0.1/spiral.exe"
+    }
+}

@@ -3,6 +3,7 @@ open sm'_operators
 inl main () =
     {
         tests = true
+        trace = false
         backends =
             [
                 Gleam, true
