@@ -6,16 +6,16 @@ inl main () =
         trace = false
         backends =
             [
-                Gleam, true
+                Gleam, false
                 Lua, true
                 Fsharp, true
-                Cuda, true
+                Cuda, false
                 Cpp, true
-                Rust None, true
-                Rust (Some Wasm), true
-                Rust (Some Contract), true
-                TypeScript, true
-                Python, true
+                Rust None, false
+                Rust (Wasm |> Some), false
+                Rust (Contract |> Some), false
+                TypeScript, false
+                Python, false
             ]
             |> listm'.filter snd
             |> listm.map (fst >> reflection.union_to_string)
