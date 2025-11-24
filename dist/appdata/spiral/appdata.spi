@@ -1,0 +1,25 @@
+open sm'_operators
+
+inl main () =
+    {
+        tests = true
+        backends =
+            [
+                Gleam, true
+                Lua, true
+                Fsharp, true
+                Cuda, true
+                Cpp, true
+                Rust None, true
+                Rust (Some Wasm), true
+                Rust (Some Contract), true
+                TypeScript, true
+                Python, true
+            ]
+            |> listm'.filter snd
+            |> listm.map (fst >> reflection.union_to_string)
+            |> listm'.box
+            |> listm'.to_array'
+    }
+    |> sm'.format
+    |> console.write_line

@@ -1,0 +1,6 @@
+packageDir: c:/home/git/spiral/lib
+packages:
+    |core-
+    spiral-
+modules:
+    appdata

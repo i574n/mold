@@ -28,3 +28,6 @@ target/
 *.fs.ts
 
 .history/
+
+__pycache__/
+.*.toml*
