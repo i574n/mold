@@ -1,7 +1,7 @@
 open sm'_operators
 
 inl main () =
-    {
+    #?{
         tests = true
         trace = false
         backends =
@@ -22,5 +22,4 @@ inl main () =
             |> listm'.box
             |> listm'.to_array'
     }
-    |> sm'.format
     |> console.write_line
